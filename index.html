@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Codification: UTF-8 metadata-->
+    <meta charset="UTF-8" />
+    <!-- ViewPort metadata -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO -->
+    <!-- Title & Description -->
+    <title>HTML Refresh Training</title>
+    <meta name="description" content="HTML basics refresh training" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="HTML Refresh Training" />
+    <meta property="og:description" content="HTML basics refresh training" />
+    <meta property="og:image" content="/images/purple-planet.png" />
+    <meta property="og:image:alt" content="Purple Planet image" />
+
+    <!-- Principal page -->
+    <link rel="canonical" href="https://html-refresh-training.com" />
+    <!-- Alternative page -->
+    <link
+      rel="alternate"
+      href="https://html-refresh-training.com/es"
+      hreflang="es-ES"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/purple-planet.png" />
+
+    <!-- Styles -->
+    <style>
+      body {
+        background-color: #333333;
+        padding: 0.5rem 2rem;
+        color: #f0f0f0;
+        font-family: sans-serif;
+        font-weight: 300;
+      }
+
+      a {
+        text-decoration: none;
+        color: #006fff;
+        margin-right: 1rem;
+      }
+
+      .footer {
+        position: fixed;
+        bottom: 0.4vh;
+        right: 0.4vw;
+        font-size: 0.8rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>HTML Refresh Training</h1>
+
+      <!-- Navbar -->
+      <nav>
+        <!-- Internal links -->
+        <a href="#article-1">Article-1</a>
+        <a href="#article-2">Article-2</a>
+
+        <!-- External links -->
+        <!-- _blank: Open the page in a new tab. noreferrer: For security, it does not send the referrer header.-->
+        <a
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          target="_blank"
+          rel="noreferrer"
+          >Rick
+        </a>
+      </nav>
+      <br />
+
+      <img
+        id="cyberpunk-image"
+        src="/images/Cyberpunk2077.jpg"
+        title="Cyberpunk2077"
+        alt="Cyberpunk2077"
+        height="300"
+      />
+
+      <!-- This has been completely necessary -->
+      <video
+        controls
+        autoplay
+        muted
+        loop
+        height="300"
+        src="/videos/forever-spinning-kid-on-go-kart.mp4"
+      ></video>
+
+      <audio controls src="/audios/knock-knock-8d.mp3"></audio>
+
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        <strong>
+          Beatae perferendis voluptate officia facilis eos eligendi suscipit
+          alias sapiente.
+        </strong>
+        Iusto vitae magnam aliquid quis quos laboriosam qui ipsam accusantium
+        dolore voluptate.
+      </p>
+    </header>
+
+    <main>
+      <h2>Semantic HTML</h2>
+
+      <button id="openModal">Open modal</button>
+
+      <dialog id="modal">
+        <h1>Modal</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+          adipisci magni obcaecati veritatis fuga placeat ex, odit numquam
+          tempore velit! Sequi, cupiditate! Excepturi, placeat! Est totam
+          repudiandae in. Reprehenderit, ad.
+        </p>
+        <button id="closeModal">Close modal</button>
+      </dialog>
+
+      <script>
+        // The IDs have a cost in JS, for each ID that exists, a property will be created on the window object
+
+        window.openModal.addEventListener("click", () => {
+          window.modal.showModal();
+        });
+        window.closeModal.addEventListener("click", () => {
+          window.modal.close();
+        });
+      </script>
+
+      <!-- aside: Supplementary info -->
+      <aside>
+        <header>
+          <h3>Unordered List</h3>
+          <ul>
+            <li class="list-item">a</li>
+            <li class="list-item">b</li>
+            <li class="list-item">c</li>
+          </ul>
+        </header>
+      </aside>
+
+      <!-- section: Generic independent sections of a document -->
+      <section>
+        <!-- article: Independent blocks of info -->
+        <article id="article-1">
+          <header>
+            <h4>Article 1 title</h4>
+          </header>
+
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius
+            numquam blanditiis autem, quo deleniti repellendus repellat quam
+            laudantium officiis recusandae sint earum architecto quasi officia
+            temporibus aspernatur qui cupiditate.
+          </p>
+
+          <footer>
+            <small>Article 1 footer</small>
+          </footer>
+        </article>
+
+        <article id="article-2">
+          <header>
+            <h4>Article 2 title</h4>
+          </header>
+
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa
+            dolorem error at iusto vel eos laborum voluptatem ducimus quos,
+            autem impedit expedita fuga, accusantium temporibus sunt harum
+            dolores ad! Aperiam.
+          </p>
+
+          <footer>
+            <small>Article 2 footer</small>
+          </footer>
+        </article>
+      </section>
+
+      <section>
+        <h2>FAQ</h2>
+
+        <details open>
+          <summary>Question</summary>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+            laborum magni, quas, nostrum veniam sapiente similique dolorem, sunt
+            sequi fugiat pariatur aspernatur ex laudantium a libero quia atque
+            molestiae et!
+          </p>
+        </details>
+
+        <details>
+          <summary>Other question</summary>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id magnam
+            qui tempore. Maxime, hic. Ducimus nobis ab, earum facilis id quia
+            cupiditate unde accusamus facere praesentium doloribus autem minima
+            corrupti!
+          </p>
+        </details>
+      </section>
+
+      <section>
+        <h2>Contact form</h2>
+
+        <form method="post" action="/">
+          <fieldset>
+            <legend>Personal info</legend>
+
+            <label for="name">Name: </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Rick Astley"
+              required
+            />
+
+            <label for="email">Email: </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="rickastley@gmail.com"
+              required
+            />
+
+            <label for="tel">Phone number: </label>
+            <input
+              type="tel"
+              name="tel"
+              id="tel"
+              placeholder="666999999"
+              pattern="[0-9]{9}"
+              required
+            />
+          </fieldset>
+
+          <fieldset>
+            <legend>Reason for contacting</legend>
+
+            <label for="why">Why? </label>
+            <select name="why" id="why" required>
+              <option value="1">Work</option>
+              <option value="2">Question</option>
+              <option value="3">More info</option>
+            </select>
+
+            <!-- Datalist cannot be styled -->
+            <datalist id="languages">
+              <option value="JavaScript"></option>
+              <option value="Python"></option>
+              <option value="C++"></option>
+            </datalist>
+            <label for="language">What language do you prefer?</label>
+            <input
+              list="languages"
+              name="language"
+              id="language"
+              placeholder="Language"
+            />
+
+            <label for="terms">Do you accept the terms?</label>
+            <input type="checkbox" name="terms" id="terms" required />
+          </fieldset>
+
+          <!-- Buttons inside a form are of type="submit" as default -->
+          <button>Send contact</button>
+        </form>
+      </section>
+      <br />
+
+      <iframe
+        src="https://www.youtube.com/embed/3nYLTiY5skU?si=bQTD6aSnJR7cIm3A"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        style="width: 100%; aspect-ratio: 16/9"
+      ></iframe>
+      <br />
+      <br />
+
+      <!-- Loading lazy loads image only when necessary to optimize resources. Do not use on first-view images to avoid flashes -->
+      <img
+        loading="lazy"
+        src="/images/interstellar-black-hole.png"
+        alt="Interstellar black hole"
+        style="width: 100%; aspect-ratio: 5120/2880"
+      />
+    </main>
+
+    <footer class="footer">
+      <a hidden href="mailto:invent123@gmail.com">Send me an email</a>
+      <a hidden href="tel:+34666999999">Call me ;)</a>
+      Footer
+    </footer>
+  </body>
+</html>
